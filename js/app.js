@@ -68,15 +68,16 @@ function deleteNote(index) {
 }
 
 
+// to search the saved notes both by notes and title
 let search = document.getElementById('searchTxt');
 search.addEventListener("input", function () {
-
     let inputVal = search.value.toLowerCase();
     // console.log('Input event fired!', inputVal);
     let noteCards = document.getElementsByClassName('noteCard');
     Array.from(noteCards).forEach(function (element) {
         let cardTxt = element.getElementsByTagName("p")[0].innerText;
-        if (cardTxt.includes(inputVal)) {
+        let titleTxt = element.getElementsByTagName("h5")[0].innerText;
+        if (cardTxt.includes(inputVal) || titleTxt.includes(inputVal)) {
             element.style.display = "block";
         }
         else {
@@ -84,6 +85,7 @@ search.addEventListener("input", function () {
         }
         // console.log(cardTxt);
     })
+
 })
 
 // Hiding the heading and add note when click on search
@@ -97,9 +99,10 @@ searchChange.addEventListener('click', function () {
 searchChange.addEventListener('blur', function () {
     hidediv.style.display = 'block';
 });
+
+
 /*
 Further Features:
-1. Add Title
 2. Mark a note as Important
 3. Separate notes by user
 4. Sync and host to web server
