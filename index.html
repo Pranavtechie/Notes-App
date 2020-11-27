@@ -36,22 +36,24 @@
 
 
     <div class="container my-3">
-        <h1>Welcome To Magic Notes</h1>
-        <div class="card">
-            <div class="card-body">
-                <div class="form-group">
-                    <h5 class="card-title">Add title</h5>
-                    <input type="text" class="form-control" id="addTitle" aria-describedby="title"
-                        placeholder="Enter title">
+        <div id="search-hide">
+            <h1>Welcome To Magic Notes</h1>
+            <div class="card">
+                <div class="card-body">
+                    <div class="form-group">
+                        <h5 class="card-title">Add title</h5>
+                        <input type="text" class="form-control" id="addTitle" aria-describedby="title"
+                            placeholder="Enter title">
+                    </div>
+                    <h5 class="card-title">Add a note</h5>
+                    <div class="form-group">
+                        <textarea class="form-control" id="addTxt" placeholder="Enter a note" rows="3"></textarea>
+                    </div>
+                    <button class="btn btn-primary" id="addBtn">Add Note</button>
                 </div>
-                <h5 class="card-title">Add a note</h5>
-                <div class="form-group">
-                    <textarea class="form-control" id="addTxt" placeholder="Enter a note" rows="3"></textarea>
-                </div>
-                <button class="btn btn-primary" id="addBtn">Add Note</button>
             </div>
+            <hr>
         </div>
-        <hr>
         <h1>Your Notes</h1>
         <hr>
         <div id="notes" class="row container-fluid"> </div>

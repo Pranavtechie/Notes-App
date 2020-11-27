@@ -86,6 +86,17 @@ search.addEventListener("input", function () {
     })
 })
 
+// Hiding the heading and add note when click on search
+let searchChange = document.getElementById('searchTxt');
+let hidediv = document.getElementById('search-hide');
+searchChange.addEventListener('click', function () {
+    hidediv.style.display = 'none';
+});
+
+// Showing the heading and add note when search is blurred
+searchChange.addEventListener('blur', function () {
+    hidediv.style.display = 'block';
+});
 /*
 Further Features:
 1. Add Title
